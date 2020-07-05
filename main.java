@@ -1,10 +1,12 @@
 package zoo;
 import java.util.Scanner;
+
 import java.util.ArrayList;
 public class main {
-
+	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		CrearV Prueba = new CrearV();
 		
 		Terrestre A1 = new Terrestre(190.0,(float) 1.2, "Leon", "Marron");
 		Terrestre A2 = new Terrestre(300.0, (float)1.5, "Oso Pardo", "Marron");
@@ -17,31 +19,28 @@ public class main {
 		Volador A9 = new Volador(1.1, (float)0.6, "Halcon", "Azul");
 		Volador A10 = new Volador(0.7, (float)0.5, "Loro", "Variado");
 		
-		ArrayList <Object> AnimalesT = new ArrayList<>();
-		AnimalesT.add(A1);
-		AnimalesT.add(A2);
-		AnimalesT.add(A3);
-		AnimalesT.add(A4);
-		AnimalesT.add(A5);
+		Prueba.AnimalesT.add(A1);
+		Prueba.AnimalesT.add(A2);
+		Prueba.AnimalesT.add(A3);
+		Prueba.AnimalesT.add(A4);
+		Prueba.AnimalesT.add(A5);
 		
-		ArrayList <Object> AnimalesV = new ArrayList<>();
-		AnimalesV.add(A6);
-		AnimalesV.add(A7);
-		AnimalesV.add(A8);
-		AnimalesV.add(A9);
-		AnimalesV.add(A10);
-		
-		ArrayList <Object> Animales = new ArrayList<>();
-		Animales.add(A1);
-		Animales.add(A2);
-		Animales.add(A3);
-		Animales.add(A4);
-		Animales.add(A5);
-		Animales.add(A6);
-		Animales.add(A7);
-		Animales.add(A8);
-		Animales.add(A9);
-		Animales.add(A10);
+		Prueba.AnimalesV.add(A6);
+		Prueba.AnimalesV.add(A7);
+		Prueba.AnimalesV.add(A8);
+		Prueba.AnimalesV.add(A9);
+		Prueba.AnimalesV.add(A10);
+	
+		Prueba.Animales.add(A1);
+		Prueba.Animales.add(A2);
+		Prueba.Animales.add(A3);
+		Prueba.Animales.add(A4);
+		Prueba.Animales.add(A5);
+		Prueba.Animales.add(A6);
+		Prueba.Animales.add(A7);
+		Prueba.Animales.add(A8);
+		Prueba.Animales.add(A9);
+		Prueba.Animales.add(A10);
 		
 		boolean Salir = false;
 		int a;
@@ -76,8 +75,8 @@ public class main {
 				B[b].setcolor(sc.next());
 				System.out.println("Desea agregar otro animal?(0=Si,1=No):");
 				m = sc.nextInt();
-				Animales.add(B[b]);
-				AnimalesT.add(B[b]);
+				Prueba.Animales.add(B[b]);
+				Prueba.AnimalesT.add(B[b]);
 				}while(m==0);
 			break;
 		case 2:
@@ -99,18 +98,18 @@ public class main {
 				C[c].setcolor(sc.next());
 				System.out.println("Desea agregar otro animal?(0=Si,1=No):");
 				n = sc.nextInt();
-				Animales.add(C[c]);
-				AnimalesV.add(C[c]);
+				Prueba.Animales.add(C[c]);
+				Prueba.AnimalesV.add(C[c]);
 				}while(n==0);
 			break;
 		case 3:
-			System.out.println("El zoologico tiene los siguientes Animales:\n" + Animales);
+			System.out.println("El zoologico tiene los siguientes Animales:\n" + Prueba.Animales);
 			break;
 		case 4:
-			System.out.println("El zoologico tiene los siguientes Animales:\n" + AnimalesV);
+			System.out.println("El zoologico tiene los siguientes Animales:\n" + Prueba.AnimalesV);
 			break;
 		case 5:
-			System.out.println("El zoologico tiene los siguientes Animales:\n" + AnimalesT);
+			System.out.println("El zoologico tiene los siguientes Animales:\n" + Prueba.AnimalesT);
 			break;
 		case 6:
 			System.out.println();
